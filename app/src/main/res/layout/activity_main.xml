@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zj.example.customview.changecolorview.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_bg">
+        <com.zj.example.customview.changecolorview.ChangeColorView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@mipmap/ic_menu_start_conversation"
+            app:changecolor_color="#ff45c01c"
+            app:changecolor_text="消息"
+            app:changecolor_textsize="12sp"
+            app:changecolor_icon="@mipmap/ic_menu_start_conversation"
+
+        />
+        <com.zj.example.customview.changecolorview.ChangeColorView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@mipmap/ic_menu_allfriends"
+            app:changecolor_color="#ff45c01c"
+            app:changecolor_text="通讯录"
+            app:changecolor_textsize="12sp"
+            app:changecolor_icon="@mipmap/ic_menu_friendslist"
+            />
+        <com.zj.example.customview.changecolorview.ChangeColorView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@mipmap/ic_menu_emoticons"
+            app:changecolor_color="#ff45c01c"
+            app:changecolor_text="群组"
+            app:changecolor_textsize="12sp"
+            app:changecolor_icon="@mipmap/ic_menu_allfriends"
+            />
+        <com.zj.example.customview.changecolorview.ChangeColorView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@mipmap/ic_menu_friendslist"
+            app:changecolor_color="#ff45c01c"
+            app:changecolor_text="我的"
+            app:changecolor_textsize="12sp"
+            app:changecolor_icon="@mipmap/ic_menu_emoticons"
+            />
+    </LinearLayout>
+</LinearLayout>
