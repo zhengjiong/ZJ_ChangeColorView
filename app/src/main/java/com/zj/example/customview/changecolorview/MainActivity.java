@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private PagerAdapter mAdapter;
     private ViewPager mViewPager;
     private List<Fragment> mFragments = new ArrayList<>();
+
     private List<ChangeColorView> mTabIndicators = new ArrayList<>();
 
     public void onClick(View view) {
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         mTabIndicators.add(changeColorViewD);
 
         changeColorViewA.setAlpha(1.0f);
+
     }
 
     private void setViewPager() {

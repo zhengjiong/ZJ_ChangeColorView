@@ -10,7 +10,6 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.res.TypedArrayUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -30,6 +29,8 @@ public class ChangeColorView extends View {
     private Rect mIconRect;
 
     private float mAlpha = 0f;
+
+
     private Bitmap mAlphaBitmap;
     private Paint mAlphaPaint;
 
@@ -114,16 +115,20 @@ public class ChangeColorView extends View {
     private void drawTargetText(Canvas canvas, int alpha) {
         mTextPaint.setColor(mColor);
         mTextPaint.setAlpha(alpha);
+
         int x = getMeasuredWidth() / 2 - mTextBound.width() / 2;
         int y = mIconRect.bottom + getPaddingTop() + mTextMarginTop;
         canvas.drawText(mText, x, y, mTextPaint);
     }
 
 
+
     private void setupBitmap(int alpha) {
+
         mAlphaBitmap = Bitmap.createBitmap(getMeasuredWidth(), getMeasuredHeight(), Bitmap.Config.ARGB_8888);
 
         Canvas canvas = new Canvas(mAlphaBitmap);
+
 
         //這裡必須要new一個新的
         mAlphaPaint = new Paint();
@@ -131,8 +136,6 @@ public class ChangeColorView extends View {
         mAlphaPaint.setDither(true);// 防抖动
         mAlphaPaint.setColor(mColor);
         mAlphaPaint.setAlpha(alpha);
-        mAlphaPaint.setFilterBitmap(true);// 图像过滤
-
 
         /**
          canvas原有的图片 可以理解为背景 就是dst
